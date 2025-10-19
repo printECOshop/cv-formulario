@@ -2,17 +2,106 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Prueba Formsubmit</title>
+  <title>Formulario CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
 
-<h1>Prueba de envío con Formsubmit</h1>
+<h1>Formulario para Confección de CV</h1>
 
-<form action="https://formsubmit.co/halofon@gmail.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="text" name="Nombre" required>
+<form action="https://formspree.io/f/xeordzkb" method="POST">
+  <!-- Reemplaza "tu_codigo" por el ID real que Formspree te da -->
+
+  <label>Nombre completo:</label>
+  <input type="text" name="Nombre completo" required>
+
+  <label>Fecha de nacimiento:</label>
+  <input type="date" name="Fecha de nacimiento">
+
+  <label>Nacionalidad:</label>
+  <input type="text" name="Nacionalidad">
+
+  <label>Estado civil:</label>
+  <input type="text" name="Estado civil">
+
+  <label>Dirección:</label>
+  <input type="text" name="Dirección">
+
+  <label>Teléfono:</label>
+  <input type="tel" name="Teléfono">
+
+  <label>Email:</label>
   <input type="email" name="Email" required>
-  <button type="submit">Enviar</button>
+
+  <label>Perfil profesional:</label>
+  <textarea name="Perfil profesional" rows="4"></textarea>
+
+  <label>Formación académica:</label>
+  <textarea name="Formación académica" rows="4"></textarea>
+
+  <label>Experiencia laboral:</label>
+  <textarea name="Experiencia laboral" rows="4"></textarea>
+
+  <label>Idiomas:</label>
+  <textarea name="Idiomas" rows="3"></textarea>
+
+  <label>Habilidades técnicas:</label>
+  <textarea name="Habilidades técnicas" rows="3"></textarea>
+
+  <label>Habilidades blandas:</label>
+  <textarea name="Habilidades blandas" rows="3"></textarea>
+
+  <label>Cursos y certificaciones:</label>
+  <textarea name="Cursos y certificaciones" rows="3"></textarea>
+
+  <label>Otros datos de interés:</label>
+  <textarea name="Otros datos de interés" rows="3"></textarea>
+
+  <button type="submit">Enviar CV</button>
 </form>
 
 </body>
