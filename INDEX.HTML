@@ -52,67 +52,61 @@
 <body>
 
 <h1>Formulario para Confección de CV</h1>
-<form id="cvForm">
+
+<form action="https://formsubmit.co/printgetafe@gmail.com" method="POST">
+  <!-- Reemplaza tu-email@dominio.com por tu correo real -->
+
+  <!-- Evita spam -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
   <label>Nombre completo:</label>
-  <input type="text" name="nombre" required>
+  <input type="text" name="Nombre completo" required>
 
   <label>Fecha de nacimiento:</label>
-  <input type="date" name="fecha_nacimiento">
+  <input type="date" name="Fecha de nacimiento">
 
   <label>Nacionalidad:</label>
-  <input type="text" name="nacionalidad">
+  <input type="text" name="Nacionalidad">
 
   <label>Estado civil:</label>
-  <input type="text" name="estado_civil">
+  <input type="text" name="Estado civil">
 
   <label>Dirección:</label>
-  <input type="text" name="direccion">
+  <input type="text" name="Dirección">
 
   <label>Teléfono:</label>
-  <input type="tel" name="telefono">
+  <input type="tel" name="Teléfono">
 
   <label>Email:</label>
-  <input type="email" name="email">
+  <input type="email" name="Email" required>
 
   <label>Perfil profesional:</label>
-  <textarea name="perfil" rows="4"></textarea>
+  <textarea name="Perfil profesional" rows="4"></textarea>
 
   <label>Formación académica:</label>
-  <textarea name="formacion" rows="4"></textarea>
+  <textarea name="Formación académica" rows="4"></textarea>
 
   <label>Experiencia laboral:</label>
-  <textarea name="experiencia" rows="4"></textarea>
+  <textarea name="Experiencia laboral" rows="4"></textarea>
 
   <label>Idiomas:</label>
-  <textarea name="idiomas" rows="3"></textarea>
+  <textarea name="Idiomas" rows="3"></textarea>
 
   <label>Habilidades técnicas:</label>
-  <textarea name="habilidades_tecnicas" rows="3"></textarea>
+  <textarea name="Habilidades técnicas" rows="3"></textarea>
 
   <label>Habilidades blandas:</label>
-  <textarea name="habilidades_blandas" rows="3"></textarea>
+  <textarea name="Habilidades blandas" rows="3"></textarea>
 
   <label>Cursos y certificaciones:</label>
-  <textarea name="cursos" rows="3"></textarea>
+  <textarea name="Cursos y certificaciones" rows="3"></textarea>
 
   <label>Otros datos de interés:</label>
-  <textarea name="otros" rows="3"></textarea>
+  <textarea name="Otros datos de interés" rows="3"></textarea>
 
   <button type="submit">Enviar CV</button>
 </form>
-
-<script>
-  document.getElementById("cvForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const formData = new FormData(this);
-    let resumen = "--- CURRÍCULUM VITAE ---\n";
-    for (let [key, value] of formData.entries()) {
-      resumen += `${key.replace("_", " ")}: ${value}\n`;
-    }
-    alert("Datos guardados:\n\n" + resumen);
-    // Aquí podrías enviar los datos a un servidor con fetch()
-  });
-</script>
 
 </body>
 </html>
